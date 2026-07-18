@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { PageWrapper } from '../../components/PageWrapper';
 import { type BookingEntry } from '../../types';
-import { BulletText, Heading, Subheading } from '../../components/TextHeadings';
+import { Heading, Subheading } from '../../components/TextHeadings';
 import styled from 'styled-components';
 import { useSittingServicesQuery } from '../../hooks/useSittingServicesQuery';
 import { PetOptions } from '../../utils/PetLabelOptions';
@@ -92,6 +92,10 @@ const IconButtonLabel = styled.label<{ isSelected: boolean }>`
   ${HiddenRadio}:focus-visible + & {
     outline: 2px solid #0056b3;
     outline-offset: 2px;
+  }
+
+  > svg > path {
+    fill: ${({ isSelected }) => (isSelected ? 'var(--font-color)' : 'var(--primary-color)')};
   }
 `;
 

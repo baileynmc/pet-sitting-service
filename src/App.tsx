@@ -20,6 +20,8 @@ const GlobalStyle = createGlobalStyle`
     --secondary-color-hover: #86BAA4;
     --font-color: #181d31;
     --bg-color: #f2eee1;
+    --card-color: #faf7ed;
+    --card-color-hover: #fdfcf6;
     --font-size-xl: 2.25rem;
     --font-size-lg: 1.25rem;
     --font-size-md: 1rem;
