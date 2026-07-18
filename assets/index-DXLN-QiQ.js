@@ -359,7 +359,7 @@ Error generating stack: `+e.message+`
   width: 100%;
   margin: 0;
   padding: 0;
-`,ml=Ai([{path:`/`,Component:()=>{let e=(0,eo.c)(6),t;e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=[],e[0]=t):t=e[0];let[n,r]=(0,A.useState)(t),i;e[1]===n?i=e[2]:(i={activeBookings:n,setActiveBookings:r},e[1]=n,e[2]=i);let a;e[3]===Symbol.for(`react.memo_cache_sentinel`)?(a=(0,G.jsxs)(pl,{children:[(0,G.jsx)(dl,{title:`Precious Petsitting`,logo:(0,G.jsx)(fl,{}),children:(0,G.jsx)(ic,{to:`/admin`,children:`Admin View`})}),(0,G.jsx)(`main`,{children:(0,G.jsx)(Br,{})})]}),e[3]=a):a=e[3];let o;return e[4]===i?o=e[5]:(o=(0,G.jsx)(Cc.Provider,{value:i,children:a}),e[4]=i,e[5]=o),o},children:[{index:!0,Component:mc},{path:`book`,Component:Ic},{path:`admin`,Component:il}]}]),hl=$s`
+`,ml=Ai([{path:`/`,Component:()=>{let e=(0,eo.c)(6),t;e[0]===Symbol.for(`react.memo_cache_sentinel`)?(t=[],e[0]=t):t=e[0];let[n,r]=(0,A.useState)(t),i;e[1]===n?i=e[2]:(i={activeBookings:n,setActiveBookings:r},e[1]=n,e[2]=i);let a;e[3]===Symbol.for(`react.memo_cache_sentinel`)?(a=(0,G.jsxs)(pl,{children:[(0,G.jsx)(dl,{title:`Precious Petsitting`,logo:(0,G.jsx)(fl,{}),children:(0,G.jsx)(ic,{to:`/admin`,children:`Admin View`})}),(0,G.jsx)(`main`,{children:(0,G.jsx)(Br,{})})]}),e[3]=a):a=e[3];let o;return e[4]===i?o=e[5]:(o=(0,G.jsx)(Cc.Provider,{value:i,children:a}),e[4]=i,e[5]=o),o},children:[{index:!0,Component:mc},{path:`book`,Component:Ic},{path:`admin`,Component:il}]}],{basename:`/pet-sitting-service`}),hl=$s`
   body {
     margin: 0;
     padding: 0;
