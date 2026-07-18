@@ -27,7 +27,7 @@ const HeaderLogo = styled(Link)`
   color: var(--font-color);
 `;
 
-const HeaderTitle = styled.h1`
+const HeaderTitle = styled.p`
   font-size: var(--font-size-xl);
   font-weight: bold;
 `;

@@ -10,14 +10,17 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   :root {
-    --primary-color: #678983;
-    --primary-color-hover: #54726C;
+    --primary-color: #547872;
+    --primary-color-hover: #476761;
     --secondary-color: #9BCEC1;
     --secondary-color-hover: #86BAA4;
     --font-color: #181d31;
     --bg-color: #f2eee1;
-    --font-size-xl: 1.75rem;
+    --font-size-xl: 2.25rem;
     --font-size-lg: 1.25rem;
     --font-size-md: 1rem;
     --font-size-sm: 0.75rem;
