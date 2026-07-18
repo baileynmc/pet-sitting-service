@@ -148,7 +148,7 @@ export const BookingForm = () => {
     [bookingEntry.hoursRequested, bookingEntry.animalType, data],
   );
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setActiveBookings([...activeBookings, { ...bookingEntry, price }]);
     setIsSubmitted(true);

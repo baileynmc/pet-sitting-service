@@ -9,6 +9,8 @@ import {
   BulletHeading,
   BulletText,
 } from '../../components/TextHeadings';
+import { useScrollToQueryParam } from '../../hooks/useScrollToQueryParam';
+import { Link } from 'react-router';
 
 const ImageHeader = styled.img`
   width: 100%;
@@ -28,7 +30,7 @@ const ButtonRow = styled.div`
   margin-bottom: 20px;
 `;
 
-const ButtonLink = styled.a`
+const ButtonLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,6 +56,7 @@ const Section = styled.section`
 `;
 
 export const LandingPage = () => {
+  useScrollToQueryParam();
   return (
     <div>
       <ImageHeader src={DogAndCatPetsHeader} alt="Dog Shield" />
@@ -67,7 +70,9 @@ export const LandingPage = () => {
         </Subheading>
         <ButtonRow>
           <RouterButton to="/book">Book a Visit</RouterButton>
-          <ButtonLink href="#how-it-works">Learn More</ButtonLink>
+          <ButtonLink to={{ pathname: '/', search: '?scrollTo=how-it-works' }}>
+            Learn More
+          </ButtonLink>
         </ButtonRow>
         <Section>
           <SectionHeading id="why-choose-us">Why choose us?</SectionHeading>

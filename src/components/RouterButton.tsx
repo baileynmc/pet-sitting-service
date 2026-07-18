@@ -15,6 +15,7 @@ const StyledRouterLink = styled(Link)`
   font-weight: 600;
   transition: all 0.3s ease;
   font-family: 'Merriweather', sans-serif;
+  text-align: center;
   &:hover {
     background-color: var(--secondary-color-hover);
   }
