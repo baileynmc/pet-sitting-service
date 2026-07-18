@@ -19,3 +19,7 @@ export interface BookingEntry {
   hoursRequested: number;
   dateOfService: string;
 }
+
+export interface ActiveBookingEntry extends BookingEntry {
+  price: number;
+}

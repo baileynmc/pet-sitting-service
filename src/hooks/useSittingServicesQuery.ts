@@ -5,10 +5,10 @@ export const useSittingServicesQuery = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait 2000 milliseconds (2 seconds), then set isLoading to false
+    // Wait 1000 milliseconds (1 seconds), then set isLoading to false
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
 
     // Clean up the timer when the component unmounts
     return () => clearTimeout(timer);
