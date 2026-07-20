@@ -9,14 +9,25 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
   currency: 'USD',
 });
 
+function parseLocalDate(dateString: string): Date {
+  const [year, month, day] = dateString.split('-').map(Number);
+  return new Date(year, month - 1, day);
+}
+
+function toLocalDateKey(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
 function formatDate(dateString: string): string {
-  const date = new Date(dateString);
+  const date = parseLocalDate(dateString);
   if (Number.isNaN(date.getTime())) return dateString;
   return date.toLocaleDateString('en-US', {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
-    timeZone: 'UTC',
   });
 }
 
@@ -175,17 +186,15 @@ const EmptyBody = styled.p`
 
 export const AdminView = () => {
   const { activeBookings } = useBookingContext();
-  console.log(activeBookings);
 
   const sorted = [...activeBookings].sort(
     (a, b) =>
-      new Date(a.dateOfService).getTime() - new Date(b.dateOfService).getTime(),
+      parseLocalDate(a.dateOfService).getTime() -
+      parseLocalDate(b.dateOfService).getTime(),
   );
 
-  console.log(new Date().toISOString());
   const todaysBookings = sorted.filter(
-    (booking) =>
-      booking.dateOfService === new Date().toISOString().split('T')[0],
+    (booking) => booking.dateOfService === toLocalDateKey(new Date()),
   );
 
   return (

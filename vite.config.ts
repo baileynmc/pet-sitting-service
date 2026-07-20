@@ -7,5 +7,11 @@ export default defineConfig(({ command }) => {
   return {
     base: command === 'serve' ? '/' : '/pet-sitting-service/',
     plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
+    test: {
+      environment: 'jsdom',
+      globals: true,
+      setupFiles: ['./vitest.setup.ts'],
+      env: { TZ: 'UTC' },
+    },
   };
 });

@@ -10,6 +10,7 @@ import { PricingEstimate } from './PricingEstimate';
 import { useBookingContext } from '../../BookingContext';
 import { RouterButton } from '../../components/RouterButton';
 import { getPricingInformation } from '../../utils/getPricingInformation';
+import { BulletText } from '../../components/TextHeadings';
 
 const Form = styled.form`
   display: flex;
@@ -20,6 +21,8 @@ const Form = styled.form`
   padding-bottom: 5%;
   @media (max-width: 992px) {
     width: 90%;
+    padding-bottom: 100px;
+    margin-bottom: 200px;
   }
 `;
 
@@ -92,6 +95,13 @@ const IconButtonLabel = styled.label<{ isSelected: boolean }>`
   ${HiddenRadio}:focus-visible + & {
     outline: 2px solid #0056b3;
     outline-offset: 2px;
+  }
+
+  @media (max-width: 992px) {
+    > svg {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   > svg > path {
@@ -253,7 +263,7 @@ export const BookingForm = () => {
                         isSelected={isSelected}
                       >
                         {PetOptions[opt.type].icon}
-                        <p>{PetOptions[opt.type].label}</p>
+                        <BulletText>{PetOptions[opt.type].label}</BulletText>
                       </IconButtonLabel>
                     </div>
                   );
